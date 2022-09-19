@@ -1,0 +1,157 @@
+
+@font-face {
+    font-family:'Roboto';
+    src: url('Roboto/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family:'Roboto light';
+    src: url('Roboto/Roboto-Light.ttf');
+}
+
+body{
+    overflow-x:hidden !important;
+    /* height: 5000px; */
+}
+*{
+    font-family:'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar{
+    height:80px !important;
+    background-color:#fff !important;
+    box-shadow:0px 0px 5px rgba(0,0,0,0.25) !important;
+
+}
+.navbar-right{
+    float:right !important;
+}
+.section-1{
+    /* width:1000px !important; */
+    height:550px !important;
+    /* background-color:red !important ; */
+    background: #e67e22 !important;
+	background: -webkit-linear-gradient(to right, #e67e22, #1a1818) !important;
+	background: linear-gradient(to right,#e67e22, #f5b67e) !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: 0 0 !important;
+}
+
+.section-text{
+    padding-top:80px;
+    color:#fff !important; 
+    padding-left:60px !important ;
+}
+
+.section-text h1{
+    font-weight: bold !important;
+}
+
+.section-text h3{
+    /* font-weight: bold !important; */
+    font-family: 'Roboto light';
+}
+
+.classic{
+    font-family: 'Roboto light !important' ;
+}
+
+.card-body p{
+    font-family:'Roboto light' !important;
+}
+
+.btn-download {
+    background-color:#000 !important;
+    color: #fff !important;
+}
+
+.btn-download:hover{
+    background-color:#fff !important;
+    color: #000 !important; 
+}
+
+.btn-contact {
+    background-color:#fff !important;
+    color: #000 !important;
+}
+
+.btn-contact:hover{
+    background-color:#000 !important;
+    color: #fff !important;
+}
+
+.btn-base {
+    border-radius:0;
+    height: 50px;
+}
+
+.pricing-card{
+    /* border:1px solid ; */
+    border-radius:10px;
+    height: 640px;
+    /* box-shadow:0px 0px 5px rgba(0,0,0,0.25) !important; */
+    margin-left:10px !important ;
+    padding-top:60px !important;
+    border: 1px solid #e67e22 !important;
+}
+
+.pricing-type h5{
+    font-family: 'Roboto light';
+    font-weight: bold !important;
+}
+
+.hr-section{
+    width:10%;
+    background-color: #e67e22 !important;
+    margin-bottom:60px;
+}
+
+.offre-btn-one{
+    background-color: #e67e22 !important;
+    color: #fff !important;
+    font-family: 'Roboto light';
+}
+
+.offre-btn-two{
+    background-color: #000 !important;
+    color:#fff !important;
+    font-family: 'Roboto light';
+}
+
+.fonctionality{
+    list-style-type: none;
+    padding:0;
+    font-family:'Roboto light' !important;
+}
+
+.fonctionality .fonctionnaly-list{
+    font-family:'Roboto light' !important;
+    text-align:center !important;
+}
+
+.header-body-footer p{
+    font-family:'Roboto light' !important;
+    text-align: justify !important;
+}
+
+.header-body-footer input,textarea{
+    border-radius:0 !important;
+    font-family: 'Roboto light';
+}
+
+.header-body-footer  * {
+    font-family:'Roboto light !important';
+}
+.header-text-footer h6{
+    font-family: 'Roboto light' !important;
+}
+
+#alert-download{
+    font-family: 'Roboto light' !important;
+}
+
+.customer-type option{
+    font-family:'Roboto light' !important;
+}
+/* . */
