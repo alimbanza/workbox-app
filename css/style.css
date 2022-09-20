@@ -17,6 +17,173 @@ body{
     font-family:'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Source media queries rules
+   https://gist.githubusercontent.com/gokulkrishh/242e68d1ee94ad05f488/raw/c6dbc8ecc81d24c2eaf901de7fd376161fb12518/media-query.css
+*/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body{
+        overflow-x: hidden !important;
+        /* overflow-y: hidden !important; */
+    }
+    /* CSS */
+    
+    .hide-table{
+        display:none !important;
+    }
+    /* .space-two-btn{
+        margin-right:8px !important;
+    } */
+    .break-line{
+        display:block !important;
+        width: auto !important;
+        height: 10px !important;
+    }
+    .section-1{
+        /* height:800px !important; */
+        /* height:800px !important; */
+    }
+    .hide-space{
+        display:none !important;
+    }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    body{
+        overflow-x: hidden !important;
+        /* overflow-y: hidden !important; */
+    }
+    /* CSS */
+    
+    .hide-table{
+        display:none !important;
+    }
+    /* .space-two-btn{
+        margin-right:8px !important;
+    } */
+    .break-line{
+        display:block !important;
+        width: auto !important;
+        height: 10px !important;
+    }
+    .section-1{
+        height:800px !important;
+    }
+    .hide-space{
+        display:none !important;
+    }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    body{
+        overflow-x: hidden !important;
+        /* overflow-y: hidden !important; */
+    }
+    /* CSS */
+    
+    .hide-table{
+        display:none !important;
+    }
+    /* .space-two-btn{
+        margin-right:8px !important;
+    } */
+    .break-line{
+        display:block !important;
+        width: auto !important;
+        height: 10px !important;
+    }
+    .section-1{
+        /* height:800pxpx !important; */
+        height:800px !important;
+    }
+    .hide-space{
+        display:none !important;
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    body{
+        overflow-x: hidden !important;
+        /* overflow-y: hidden !important; */
+    }
+    /* CSS */
+    
+    .hide-table{
+        display:none !important;
+    }
+    .space-two-btn{
+        margin-right:8px !important;
+    }
+    .break-line{
+        display:block !important;
+        width: 3px !important;
+        height: 10px !important;
+    }
+
+    .hide-space{
+        display:none !important;
+    }
+
+    .hide-mention{
+        display:none !important;
+    }
+    .section-text{
+        color:#fff !important; 
+        margin-left: -40px !important;
+    }
+    #section-btn{
+        margin-left: -40px !important;
+    }
+  }
+
 .navbar{
     height:80px !important;
     background-color:#fff !important;
@@ -28,7 +195,7 @@ body{
 }
 .section-1{
     /* width:1000px !important; */
-    height:550px !important;
+    height:auto !important;
     /* background-color:red !important ; */
     background: #e67e22 !important;
 	background: -webkit-linear-gradient(to right, #e67e22, #1a1818) !important;
@@ -36,6 +203,7 @@ body{
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
 	background-position: 0 0 !important;
+    /* padding-bottom: 10px !important; */
 }
 
 .section-text{

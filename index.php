@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] == 'download'){
         
@@ -88,9 +89,9 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
         
         $response = [
             "message"=>$message,
-            "success"=>$success
+            "success"=>$success 
         ];
-
+        
         echo json_encode($response);
 
         return;
@@ -182,7 +183,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">workbox</a>
+        <a class="navbar-brand hide-table" href="#"><img src="img/logo_transparent.png" alt="" width="200"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -198,37 +199,43 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
     </div>
 </nav>
 <!-- <div class="container" style="padding-left:0 !important;margin-left:0 !important;padding-right:0 !important;margin-right: 0 !important;"> -->
-<div class="row section-1" style="margin-top:1px !important;">
+<div class="row section-1" style="margin-top:1px !important;padding-bottom:15px !important;">
     <!-- <div class="col-md-12 " > -->
-        <div class="col-md-6" >
+        <div class="col-md-6 col-sm-12" >
             <!-- gestion -->
-            <div class="row section-text">
+            <div class="row section-text" id="section-text">
                 <div class="col-md-12">
                     <h1>Pour une gestion efficace <br/>de vos ventes,</h1>
                     <br>
                     <h3>Faites le bon choix, optez <br/> pour notre logiciel
-                    pour une bonne <br/> gestion de vos ventes !
+                    au bénéfice d'une bonne <br/> gestion de vos ventes !
                     </h3>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
-            <div class="row" style="padding-left:60px !important ;">
-                <div class="col-md-5">
+            <br class="hide-space">
+            <br class="hide-space">
+            <br class="hide-space">
+            <div class="row" style="padding-left:60px !important ;" id="section-btn">
+                <div class="col-md-5 space-two-btn">
                     <button class="btn btn-base btn-download open-down">Essayer gratuitement &nbsp; <i class="bi bi-windows"></i></button>
+                </div>
+                <div class="break-line" style="display:none;">
+                    <!-- rgeiji   -->
                 </div>
                 <div class="col-md-7">
                     <button class="btn btn-base btn-contact licence-btn">Licence payante</button>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <img src="img/undraw_Projections_re_ulc6-PhotoRoom.png" style="width:600px" draggable="false">
+        <div class="col-md-6 hide-table">
+            <img src="img/undraw_Projections_re_ulc6-PhotoRoom.png" class="hide-table" style="width:600px" draggable="false">
         </div>
     <!-- </div> -->
 
-    <div class="container" style="padding-top:60px !important;">
+
+</div>
+
+<div class="container" style="padding-top:60px !important;" >
         <div class="row">
             <div class="col-md-12 text-center">
                 <h4>Pourquoi utiliser workbox ?</h4>
@@ -310,9 +317,8 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
             </div>
         </div>
     </div>
-</div>
 
-<div class="container" style="margin-top:50%;">
+<div class="container offre-section">
     <div class="row">
         <div class="col-md-12 text-center">
             <h4>Offres</h4>
@@ -321,7 +327,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
     </div>
     <div class="row" >
         <div class="col-md-3"></div>
-        <div class="col-md-3 pricing-card">
+        <div class="col-md-3 pricing-card" style="margin-bottom:20px !important;">
             <div class="pricing-type text-center">
                 <h5>
                 Gratuit
@@ -375,7 +381,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
                 </ul>
             </div>
             <div class="pricing-footer text-center">
-                <a href="#" class="btn offre-btn-one">Télécharger</a>
+                <a href="#" class="btn offre-btn-one open-down">Télécharger</a>
             </div>
         </div>
         <div class="col-md-3 pricing-card">
@@ -432,7 +438,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
                 </ul>
             </div>
             <div class="pricing-footer text-center">
-                <a href="#" class="btn offre-btn-two">Souscrire</a>
+                <a href="#" class="btn offre-btn-two licence-btn">Souscrire</a>
             </div>
         </div>
         <div class="col-md-3"></div>
@@ -453,7 +459,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
             </p>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 hide-mention">
         <div class="header-text-footer text-center">
             <h6 class="classic" style="font-family: 'Roboto light' !important;">Mentions légales</h6>
         </div>
@@ -497,20 +503,20 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
               
               </div>
               <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-6 form-group">
                       <input type="text" class="form-control customer-name" placeholder="nom" style="font-family: 'Roboto light';">
 
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 form-group">
                     <input type="text" class="form-control customer-mail" placeholder="email" style="font-family: 'Roboto light';">
                   </div>
               </div>
               <br>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 form-group">
                         <input type="tel" class="form-control customer-adresse" placeholder="adresse" style="font-family: 'Roboto light';">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 form-group">
                         <input type="tel" class="form-control customer-phone" placeholder="telephone" style="font-family: 'Roboto light';">
                     </div>
                 </div>
@@ -544,16 +550,14 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
         </div>
         <div class="header-body-footer" style="text-align:left !important ;">
             <br>
-            <form action="">
-                <!-- <label for="" class="control-label">Nom </label> -->
-                <input type="text" class="form-control" placeholder="nom">
+            <form action="contact.php" method="post">
+                <input type="text" name="name" class="form-control" placeholder="name">
                 <br/>
-                <!-- <label for="" class="control-label">Email</label> -->
-                <input type="email" class="form-control" placeholder="email"/>
+                <input type="email" name="email" class="form-control" placeholder="email"/>
+                <br/> 
+                <textarea name="message" class="form-control classic" cols="30" rows="5">Message</textarea>
                 <br/>
-                <textarea name="" class="form-control" cols="30" rows="5">Message</textarea>
-                <br/>
-                <button class="btn" style="background:#e67e22 !important;color:#fff !important;">Envoyer</button>
+                <button type="submit" class="btn classic" style="background:#e67e22 !important;color:#fff !important;">Envoyer</button>
             </form>
        
         </div>
@@ -563,6 +567,14 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
+<script>
+    <?php if(isset($_SESSION['flash']) && !empty($_SESSION['flash'])):?>
+        alert("<?php echo $_SESSION['flash']['message'];?>");
+    <?php endif;?>
+</script>
 </body>
 </html>
 
+<?php
+    unset($_SESSION['flash']);
+?>
