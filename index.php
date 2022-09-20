@@ -332,7 +332,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
                 <h5>
                 Gratuit
                 <br>
-                    <!-- 0$ -->
+                    <span style="color:#e67e22;">0$</span>
                 </h5>
             </div>
             <div class="pricing-body text-center">
@@ -389,7 +389,7 @@ if(isset($_POST) && !empty($_POST) && isset($_POST['email']) && $_GET['action'] 
                 <h5>
                     Premium
                     <br>
-                    <!-- 250$ -->
+                    <span style="color:#e67e22;">250$</span> 
                 </h5>
             </div>
             <div class="pricing-body">
